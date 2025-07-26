@@ -95,15 +95,15 @@ Edit
 | Profile Builder     | ✅ Completed |
 | Public Profile Page | ✅ Completed |
 | NFC Tag Writing     | ✅ Completed |
-| Emergency Bypass    | 🔄 In Progress |
+| Emergency Bypass    | ✅ Completed |
 | QR Code Integration | 🔄 In Progress |
 
 ---
 
 ## 🧪 Demo (Add when ready)
 
-- Demo video: *[Link here]*  
-- Public profile preview: *https://lyfeapp.com/public/sampleUID*
+- Demo video: *[https://drive.google.com/file/d/1PRAeimf6N0OmTFpOGY8DfhRdfgkvqD-f/view?usp=sharing]*  
+- Public profile preview: *https://lyfewearables-app.web.app/index.html?uid=pILhaUXkZxXkNakYSUQ48efktsh1*
 
 ---
 
