@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "65253535734",
+    "project_id": "lyfewearables-app",
+    "storage_bucket": "lyfewearables-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65253535734:android:6ba270fc7a8d648cc121d7",
+        "android_client_info": {
+          "package_name": "com.example.lyfe_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65253535734-bgjqcf0rvph6ukf7udops4t8jg69almt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lyfe_app",
+            "certificate_hash": "8e3248fb37f649315360aec0b071b9e8fa522c96"
+          }
+        },
+        {
+          "client_id": "65253535734-7sls7lmbi9qh3ilma7g7hosbcvgr3aog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDGBtHCjCo3gdAzEzyr-MwjxDIkmzflOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65253535734-7sls7lmbi9qh3ilma7g7hosbcvgr3aog.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "65253535734-m09benp2m8cjmslm5g5ocj1002n4soaa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.lyfeApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

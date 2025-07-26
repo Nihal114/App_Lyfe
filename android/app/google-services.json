@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "65253535734",
+    "project_id": "lyfewearables-app",
+    "storage_bucket": "lyfewearables-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65253535734:android:6ba270fc7a8d648cc121d7",
+        "android_client_info": {
+          "package_name": "com.example.lyfe_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDGBtHCjCo3gdAzEzyr-MwjxDIkmzflOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
