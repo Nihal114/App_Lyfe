@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYFE - Love Yourself For Eternity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #EAEAEA;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: rgba(27, 27, 27, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.4),
+                0 0 0 1px rgba(255,255,255,0.05);
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-top: 10px;
+        }
+
+        .medical-badge {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .medical-badge i {
+            font-size: 28px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #EAEAEA, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #AAAAAA;
+            font-weight: 300;
+        }
+
+        .emergency-banner {
+            background: linear-gradient(135deg, #ff4757, #ff3742);
+            border-radius: 12px;
+            padding: 12px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+        }
+
+        .emergency-banner i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .emergency-banner span {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 16px;
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .section h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            color: #4ecdc4;
+        }
+
+        .section h2 i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row .label {
+            color: #AAAAAA;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+        }
+
+        .info-row .label i {
+            margin-right: 8px;
+            width: 16px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .info-row .value {
+            font-weight: 500;
+            text-align: right;
+            max-width: 60%;
+            word-wrap: break-word;
+        }
+        
+        /* Style for clickable phone numbers */
+        a[href^="tel:"] {
+            color: #4ecdc4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .loading, .error {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 16px;
+        }
+
+        .loading {
+            color: #4ecdc4;
+        }
+
+        .loading i {
+            font-size: 24px;
+            margin-bottom: 10px;
+            animation: spin 1s linear infinite;
+        }
+
+        .error {
+            color: #ff4757;
+        }
+
+        .error i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .footer .lyfe-logo {
+            font-size: 14px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            body {
+                padding: 5px;
+            }
+            
+            .container {
+                padding: 16px;
+                margin-top: 10px;
+                border-radius: 20px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .medical-badge {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .medical-badge i {
+                font-size: 24px;
+            }
+            
+            .section {
+                padding: 12px;
+            }
+            
+            .info-row {
+                font-size: 13px;
+            }
+            
+            .info-row .value {
+                max-width: 55%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .info-row .value {
+                max-width: 100%;
+                text-align: left;
+                font-weight: 600;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .container {
+                border: 2px solid #EAEAEA;
+            }
+            
+            .section {
+                border: 1px solid #AAAAAA;
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .loading i {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="profile-container" style="display: none;">
+        <div class="header">
+            <div class="medical-badge">
+                <i class="fas fa-user-shield"></i>
+            </div>
+            <h1 id="fullName"></h1>
+            <p id="email"></p>
+        </div>
+
+        <div class="emergency-banner">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>MEDICAL EMERGENCY ID</span>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-user"></i>Personal Information</h2>
+            <div class="info-row">
+                <span class="label"><i class="fas fa-birthday-cake"></i>Age</span>
+                <span class="value" id="age"></span>
+            </div>
+            <div class="info-row">
+                <span class="label"><i class="fas fa-tint"></i>Blood Group</span>
+                <span class="value" id="bloodGroup"></span>
+            </div>
+            <div class="info-row">
+                <span class="label"><i class="fas fa-ruler-vertical"></i>Height</span>
+                <span class="value" id="heightCm"></span>
+            </div>
+            <div class="info-row">
+                <span class="label"><i class="fas fa-weight"></i>Weight</span>
+                <span class="value" id="weightKg"></span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><i class="fas fa-heartbeat"></i>Medical Information</h2>
+            <div class="info-row">
+                <span class="label"><i class="fas fa-allergies"></i>Allergies</span>
+                <span class="value" id="allergies"></span>
+            </div>
+            <div class="info-row">
+                <span class="label"><i class="fas fa-pills"></i>Medications</span>
+                <span class="value" id="medications"></span>
+            </div>
+        </div>
+        
+        <!-- Emergency Contacts Section -->
+        <div class="section">
+            <h2><i class="fas fa-phone-alt"></i>Emergency Contacts</h2>
+            <div id="emergency-contacts-list">
+                <!-- Contact rows will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Emergency medical information for first responders</p>
+            <div class="lyfe-logo">POWERED BY LYFE</div>
+        </div>
+    </div>
+    
+    <div id="message-container" class="loading">
+        <i class="fas fa-spinner"></i>
+        <div>Loading Medical Profile...</div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBTVA5F4CI5v1iAP_yo2QFaYy4gnWlfHnA",
+            authDomain: "lyfewearables-app.firebaseapp.com",
+            projectId: "lyfewearables-app",
+            storageBucket: "lyfewearables-app.appspot.com",
+            messagingSenderId: "65253535734",
+            appId: "1:65253535734:web:79f8b6841869d4c2c121d7",
+            measurementId: "G-P7PTTKZKFF"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Load profile function with enhanced error handling
+        async function loadProfile() {
+            const profileContainer = document.getElementById('profile-container');
+            const messageContainer = document.getElementById('message-container');
+
+            try {
+                // Get user ID from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const userId = urlParams.get('uid');
+
+                if (!userId) {
+                    throw new Error("User ID not provided in the URL. Please check the link and try again.");
+                }
+
+                // Show loading state
+                messageContainer.innerHTML = '<i class="fas fa-spinner"></i><div>Connecting to medical database...</div>';
+
+                // Fetch user document from Firestore
+                const userDoc = await db.collection('users').doc(userId).get();
+
+                if (!userDoc.exists) {
+                    throw new Error("Medical profile not found. The user may not have completed their profile setup or the ID may be invalid.");
+                }
+
+                const userData = userDoc.data();
+
+                // Populate HTML elements with enhanced formatting
+                document.getElementById('fullName').innerText = userData.fullName || 'Name Not Available';
+                document.getElementById('email').innerText = userData.email || 'Email Not Available';
+                document.getElementById('age').innerText = userData.age ? `${userData.age} years` : 'Not specified';
+                document.getElementById('bloodGroup').innerText = userData.bloodGroup || 'Not specified';
+                document.getElementById('heightCm').innerText = userData.heightCm ? `${userData.heightCm} cm` : 'Not specified';
+                document.getElementById('weightKg').innerText = userData.weightKg ? `${userData.weightKg} kg` : 'Not specified';
+                
+                const allergies = userData.allergies || 'None reported';
+                const medications = userData.medications || 'None reported';
+                
+                document.getElementById('allergies').innerText = allergies;
+                document.getElementById('medications').innerText = medications;
+
+                if (allergies !== 'None reported' && allergies !== 'N/A') {
+                    document.getElementById('allergies').style.color = '#ff6b6b';
+                    document.getElementById('allergies').style.fontWeight = '600';
+                }
+
+                // Render Emergency Contacts
+                const contactsList = document.getElementById('emergency-contacts-list');
+                let hasContacts = false;
+                
+                // Check for emergencyContact1
+                if (userData.emergencyContact1 && userData.emergencyContact1.number) {
+                    const contactRow = document.createElement('div');
+                    contactRow.className = 'info-row';
+                    
+                    const relation = userData.emergencyContact1.relation || 'Emergency Contact';
+                    const phone = userData.emergencyContact1.number;
+                    
+                    contactRow.innerHTML = `
+                        <span class="label"><i class="fas fa-user-friends"></i>${relation}</span>
+                        <span class="value">
+                            <a href="tel:${phone}">${phone}</a>
+                        </span>
+                    `;
+                    contactsList.appendChild(contactRow);
+                    hasContacts = true;
+                }
+                
+                // Check for emergencyContact2
+                if (userData.emergencyContact2 && userData.emergencyContact2.number) {
+                    const contactRow = document.createElement('div');
+                    contactRow.className = 'info-row';
+                    
+                    const relation = userData.emergencyContact2.relation || 'Emergency Contact';
+                    const phone = userData.emergencyContact2.number;
+                    
+                    contactRow.innerHTML = `
+                        <span class="label"><i class="fas fa-user-friends"></i>${relation}</span>
+                        <span class="value">
+                            <a href="tel:${phone}">${phone}</a>
+                        </span>
+                    `;
+                    contactsList.appendChild(contactRow);
+                    hasContacts = true;
+                }
+                
+                // If no contacts found, show default message
+                if (!hasContacts) {
+                    contactsList.innerHTML = `
+                        <div class="info-row">
+                            <span class="label"><i class="fas fa-user-friends"></i>Contacts</span>
+                            <span class="value">None specified</span>
+                        </div>
+                    `;
+                }
+
+                // Show profile and hide loading
+                profileContainer.style.display = 'block';
+                messageContainer.style.display = 'none';
+
+                // Add loaded animation
+                profileContainer.style.opacity = '0';
+                profileContainer.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    profileContainer.style.transition = 'all 0.5s ease';
+                    profileContainer.style.opacity = '1';
+                    profileContainer.style.transform = 'translateY(0)';
+                }, 100);
+
+            } catch (error) {
+                // Enhanced error handling
+                messageContainer.className = 'error';
+                messageContainer.innerHTML = `
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>Unable to Load Medical Profile</div>
+                    <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">${error.message}</p>
+                `;
+                console.error("Failed to load medical profile:", error);
+            }
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', loadProfile);
+
+        // Add connection status monitoring
+        window.addEventListener('online', () => {
+            if (document.getElementById('message-container').style.display !== 'none') {
+                loadProfile();
+            }
+        });
+
+        window.addEventListener('offline', () => {
+            const messageContainer = document.getElementById('message-container');
+            if (messageContainer.style.display !== 'none') {
+                messageContainer.className = 'error';
+                messageContainer.innerHTML = `
+                    <i class="fas fa-wifi"></i>
+                    <div>Connection Lost</div>
+                    <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">Please check your internet connection and try again.</p>
+                `;
+            }
+        });
+    </script>
+
+</body>
+</html>
