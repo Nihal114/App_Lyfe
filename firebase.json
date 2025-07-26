@@ -1,0 +1,39 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "lyfewearables-app",
+          "appId": "1:65253535734:android:6ba270fc7a8d648cc121d7",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "lyfewearables-app",
+          "configurations": {
+            "android": "1:65253535734:android:6ba270fc7a8d648cc121d7",
+            "ios": "1:65253535734:ios:30ecfc7b6ffdaaf7c121d7",
+            "macos": "1:65253535734:ios:30ecfc7b6ffdaaf7c121d7",
+            "web": "1:65253535734:web:79f8b6841869d4c2c121d7",
+            "windows": "1:65253535734:web:880f087e4e297891c121d7"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
