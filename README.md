@@ -125,11 +125,6 @@ We’re a multidisciplinary team committed to building life-saving digital solut
 
 ---
 
-## 🙏 Special Thanks
 
-To the mentors, organizers, and jury of AIDC @ SATI  
-for empowering students to solve real-world problems with technology.
-
----
 
 > _“Build fast. Think clearly. Execute like it matters — because it does.”_
