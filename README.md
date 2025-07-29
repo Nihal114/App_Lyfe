@@ -104,15 +104,13 @@ Edit
 
 ---
 
-## 📅 Submission Details
+## 👥 Team
 
-- **Challenge**: All India Developers Challenge (AIDC)
-- **Organizer**: Samrat Ashok Technological Institute (SATI)
-- **Year**: 2025
-- **Team Lead**: S. BhagyaSree Vara Lakshmi
-- **Team Member 1**: T. Shruthi
-- **Team Member 2**: K. Nihal Shankar
+- **K. Nihal Shankar** – Founder, Product Architect & Full Stack Developer  
+- **S. BhagyaSree Vara Lakshmi** – UI/UX Designer & Frontend Developer  
+- **T. Shruthi** – QA Engineer & Research Analyst  
 
+We’re a multidisciplinary team committed to building life-saving digital solutions — where precision, speed, and usability define every decision.
 
 ---
 
