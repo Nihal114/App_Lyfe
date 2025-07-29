@@ -1,9 +1,6 @@
 # 🧬 LYFE – One Tap to Save a Life
 
-**Submitted to the All India Developers Challenge (AIDC)**  
-*Organized by Samrat Ashok Technological Institute*
 
----
 
 ## 📱 About LYFE
 
